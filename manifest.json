@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Gemini Chat Folder",
+  "version": "1.0",
+  "description": "Geminiにフォルダ管理UIを追加します",
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["https://gemini.google.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}

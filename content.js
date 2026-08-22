@@ -4,7 +4,7 @@
   let folders = JSON.parse(localStorage.getItem('gemini_folders') || '[]');
   const save = () => localStorage.setItem('gemini_folders', JSON.stringify(folders));
 
-  // スタイル定義（フォントサイズ拡大版）
+  // スタイル定義
   const style = document.createElement('style');
   style.textContent = `
     #g-sidebar-folders-container {
@@ -23,7 +23,7 @@
       justify-content: space-between;
       align-items: center;
       color: #e3e3e3;
-      font-size: 14px; /* 13px -> 14px に拡大 */
+      font-size: 14px;
       font-weight: 500;
       margin-bottom: 10px;
     }
@@ -31,7 +31,7 @@
       background: rgba(168, 199, 250, 0.08);
       border: 1px solid #a8c7fa;
       color: #a8c7fa;
-      font-size: 12px; /* 11px -> 12px に拡大 */
+      font-size: 12px;
       cursor: pointer;
       padding: 4px 10px;
       border-radius: 6px;
@@ -60,7 +60,7 @@
       align-items: center;
       padding: 8px 12px;
       cursor: pointer;
-      font-size: 13.5px; /* 12.5px -> 13.5px に拡大 */
+      font-size: 13.5px;
       color: #e3e3e3;
       user-select: none;
     }
@@ -79,7 +79,7 @@
       padding: 6px 10px;
       color: #c4c7c5;
       text-decoration: none;
-      font-size: 13px; /* 12px -> 13px に拡大 */
+      font-size: 13px;
       border-radius: 6px;
     }
     .g-f-chat-link:hover { background: rgba(255, 255, 255, 0.08); color: #fff; }
@@ -94,7 +94,7 @@
       border: none;
       color: #8e918f;
       cursor: pointer;
-      font-size: 12px; /* 11px -> 12px に拡大 */
+      font-size: 12px;
       opacity: 0;
       padding: 2px 4px;
       border-radius: 4px;
@@ -117,7 +117,7 @@
       border-radius: 4px;
       color: #fff;
       padding: 5px 8px;
-      font-size: 12px; /* 11px -> 12px に拡大 */
+      font-size: 12px;
       outline: none;
     }
   `;
@@ -157,7 +157,7 @@
     });
   }
 
-  // サイドバーの「正解スクロール領域」を特定して挿入
+  // サイドバーのスクロール領域を特定して挿入
   function injectSidebarUI() {
     if (document.getElementById('g-sidebar-folders-container')) {
       enableNativeDrag();
